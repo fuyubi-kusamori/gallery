@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import './styles.css'; // 必要に応じてスタイルを調整してください
+import 'styles.css';
 
 const Gallery = () => {
   const generateImageData = (numImages) => {
