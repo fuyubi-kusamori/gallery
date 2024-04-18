@@ -88,6 +88,7 @@ a:hover, a:active { color: #996666; }
 }
 
 img {
+  margin: 7px;
   max-width: 100%;
   height: auto;
 }
