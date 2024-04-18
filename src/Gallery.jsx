@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import 'styles.css';
+import './styles.css';
 
 const Gallery = () => {
   const generateImageData = (numImages) => {
