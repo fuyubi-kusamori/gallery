@@ -96,6 +96,7 @@ img {
 }
 
 .pagination a {
-	margin: 7px;
 	cursor: pointer;
+	margin: 7px;
+	font-size: 14px;
 }
