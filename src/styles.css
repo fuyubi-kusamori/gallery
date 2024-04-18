@@ -9,26 +9,36 @@ body {
 	line-height: 1.5;
 	min-height: 100vh;
 	background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
-	}
+}
 
-a { text-decoration: underline; }
-a:link { color: #990066; }
-a:visited { color: #996666; }
-a:hover, a:active { color: #996666; }
+a {
+	text-decoration: underline;
+}
+
+a:link {
+	color: #990066;
+}
+
+a:visited {
+	color: #996666;
+}
+
+a:hover, a:active {
+	color: #996666;
+}
 
 #root {
 	margin: 50px auto;
 	padding: 25px;
 	width: 900px;
 	background: #fff;
-	box-shadow:
-    0 1.9px 2.5px rgba(0, 0, 0, 0.057),
-    0 5px 6.1px rgba(0, 0, 0, 0.076),
-    0 10.1px 11.4px rgba(0, 0, 0, 0.086),
-    0 19.2px 19.8px rgba(0, 0, 0, 0.092),
-    0 38.4px 34.8px rgba(0, 0, 0, 0.1),
-    0 101px 74px rgba(0, 0, 0, 0.13);
-	}
+	box-shadow: 0 1.9px 2.5px rgba(0, 0, 0, 0.057),
+				0 5px 6.1px rgba(0, 0, 0, 0.076),
+				0 10.1px 11.4px rgba(0, 0, 0, 0.086),
+				0 19.2px 19.8px rgba(0, 0, 0, 0.092),
+				0 38.4px 34.8px rgba(0, 0, 0, 0.1),
+				0 101px 74px rgba(0, 0, 0, 0.13);
+}
 
 #center {
 	margin: 0 auto;
@@ -41,63 +51,50 @@ a:hover, a:active { color: #996666; }
 
 #header {
 	margin: 0 0 10px;
-	padding: 0;
-	}
+}
 
-#title{
+#title, #subtitle {
 	font-family: 'Josefin Slab', YuGothic, 'Yu Gothic', sans-serif;
 	margin: 20px auto 0;
 	padding: 0;
 	text-align: center;
 	font-size: 18px;
-	}
-
-#subtitle{
-	font-family: 'Josefin Slab', YuGothic, 'Yu Gothic', sans-serif;
-	margin: 10px auto 20px;
-	padding: 0;
-	text-align: center;
-	font-size: 14px;
 	letter-spacing: 0.2em;
-	}
-
-.app {
-  text-align: center;
 }
 
-.gallery {
-  text-align: center;
+#subtitle {
+	margin: 10px auto 20px;
+	font-size: 14px;
+}
+
+.app, .gallery {
+	text-align: center;
 }
 
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
 }
 
 img {
-  margin: 7px;
-  max-width: 100%;
-  height: auto;
+	margin: 7px;
+	max-width: 100%;
+	height: auto;
 }
 
 .pagination button {
-  margin: 0 5px;
-}
-
-
-.pagination button {
-  margin: 7px;
+	margin: 7px;
 }
