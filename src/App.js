@@ -4,7 +4,8 @@ import Gallery from './Gallery';
 const App = () => {
   return (
     <div className="app">
-      <h1>Simple Gallery</h1>
+      <p id="title">Gallery</p>
+      <p id="subtitle">&hellip; something like an album leaf &hellip;</p>
       <Gallery />
     </div>
   );
