@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Image from 'next/image'; // Next.jsのImageコンポーネントをimport
 
 const Gallery = () => {
   // Function to generate imageData dynamically
@@ -12,7 +11,7 @@ const Gallery = () => {
   };
 
   // Generate imageData for a desired number of images
-  const imageData = generateImageData(28); // Adjust the number as needed
+  const imageData = generateImageData(50); // Adjust the number as needed
 
   const [currentPage, setCurrentPage] = useState(1);
   const imagesPerPage = 12;
@@ -38,9 +37,7 @@ const Gallery = () => {
   return (
     <div className="gallery">
       {currentImages.map((image) => (
-        <div key={image.id} onClick={() => openModal(image.url)}>
-          <Image src={image.url} alt={`Image ${image.id}`} width={500} height={500} />
-        </div>
+        <img key={image.id} src={image.url} alt={`Image ${image.id}`} onClick={() => openModal(image.url)} />
       ))}
       <div className="pagination">
         {[...Array(Math.ceil(imageData.length / imagesPerPage)).keys()].map((pageNumber) => (
@@ -51,7 +48,7 @@ const Gallery = () => {
       </div>
       {modalImage && (
         <div className="modal" onClick={closeModal}>
-          <Image src={modalImage} alt="Modal Content" width={1000} height={1000} />
+          <img src={modalImage} alt="Modal Content" className="modal-content" />
         </div>
       )}
     </div>
