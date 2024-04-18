@@ -5,7 +5,7 @@ const Gallery = () => {
   const generateImageData = (numImages) => {
     const images = [];
     for (let i = 1; i <= numImages; i++) {
-      images.push({ id: i, url: `https://gallery-rouge-rho.vercel.app/public/img/${i}_s.jpg` });
+      images.push({ id: i, url: `https://gallery-rouge-rho.vercel.app/img/${i}_s.jpg` });
     }
     return images;
   };
