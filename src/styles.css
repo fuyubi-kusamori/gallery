@@ -1,3 +1,83 @@
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: 'Josefin Slab', YuGothic, 'Yu Gothic', sans-serif;
+	color: #000;
+	font-size: 12px;
+	letter-spacing: 0.2em;
+	line-height: 1.5;
+	min-height: 100vh;
+	background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+	}
+
+a { text-decoration: underline; }
+a:link { color: #990066; }
+a:visited { color: #996666; }
+a:hover, a:active { color: #996666; }
+
+#container {
+	margin: 50px auto;
+	padding: 25px;
+	width: 600px;
+	background: #fff;
+	box-shadow:
+    0 1.9px 2.5px rgba(0, 0, 0, 0.057),
+    0 5px 6.1px rgba(0, 0, 0, 0.076),
+    0 10.1px 11.4px rgba(0, 0, 0, 0.086),
+    0 19.2px 19.8px rgba(0, 0, 0, 0.092),
+    0 38.4px 34.8px rgba(0, 0, 0, 0.1),
+    0 101px 74px rgba(0, 0, 0, 0.13);
+	}
+
+#center {
+	margin: 0 auto;
+	text-align: left;
+	overflow: hidden;
+	background: #ffffff;
+	padding: 25px;
+	box-sizing: border-box;
+}
+
+#header {
+	margin: 0 0 10px;
+	padding: 0;
+	}
+
+#title{
+	font-family: 'Josefin Slab', YuGothic, 'Yu Gothic', sans-serif;
+	margin: 20px auto 0;
+	padding: 0;
+	text-align: center;
+	font-size: 12px;
+	}
+
+#title span{
+	margin: 0;
+	padding: 0.5em;
+	font-size: 18px;
+	letter-spacing: 0.5em;
+	text-transform: uppercase;
+	}
+
+#subtitle{
+	font-family: "Noto Sans JP", YuGothic, "Yu Gothic", sans-serif;
+	margin: 10px auto 20px;
+	padding: 0;
+	text-align: center;
+	font-size: 12px;
+	letter-spacing: 0.2em;
+	}
+
+.subtitle {
+	font-family: 'Josefin Slab', YuGothic, 'Yu Gothic', sans-serif;
+	margin: 0 0 6px 0;
+	padding: 0 0 3px 0;
+	text-align: center;
+	text-transform: uppercase;
+	border-bottom: 1px dotted #ccccdd;
+	}
+
 .app {
   text-align: center;
 }
