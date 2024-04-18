@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
+import Image from 'next/image'; // Next.jsのImageコンポーネントをimport
 
 const Gallery = () => {
   // Function to generate imageData dynamically
@@ -51,7 +51,7 @@ const Gallery = () => {
       </div>
       {modalImage && (
         <div className="modal" onClick={closeModal}>
-          <Image src={modalImage} alt="Modal Content" className="modal-content" width={500} height={500} />
+          <Image src={modalImage} alt="Modal Content" width={1000} height={1000} />
         </div>
       )}
     </div>
