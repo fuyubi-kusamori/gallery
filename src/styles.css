@@ -19,7 +19,7 @@ a:hover, a:active { color: #996666; }
 #root {
 	margin: 50px auto;
 	padding: 25px;
-	width: 800px;
+	width: 900px;
 	background: #fff;
 	box-shadow:
     0 1.9px 2.5px rgba(0, 0, 0, 0.057),
@@ -92,11 +92,11 @@ a:hover, a:active { color: #996666; }
 }
 
 img {
-  margin: 10px;
+  margin: 7px;
   max-width: 80%;
   height: auto;
 }
 
 .pagination button {
-  margin: 10px;
+  margin: 7px;
 }
