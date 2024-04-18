@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './styles.css'; // スタイルを適用するためにインポートします
+import { Modal, Button } from 'react-bootstrap';
+import './styles.css'; // 必要に応じてスタイルを調整してください
 
 const Gallery = () => {
-  // Function to generate imageData dynamically
   const generateImageData = (numImages) => {
     const images = [];
     for (let i = 1; i <= numImages; i++) {
@@ -11,8 +11,7 @@ const Gallery = () => {
     return images.reverse();
   };
 
-  // Generate imageData for a desired number of images
-  const imageData = generateImageData(27); // Adjust the number as needed
+  const imageData = generateImageData(27);
 
   const [currentPage, setCurrentPage] = useState(1);
   const imagesPerPage = 12;
@@ -21,6 +20,7 @@ const Gallery = () => {
   const currentImages = imageData.slice(indexOfFirstImage, indexOfLastImage);
 
   const [modalImage, setModalImage] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   const handlePageClick = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -29,11 +29,10 @@ const Gallery = () => {
   const openModal = (image) => {
     const largeImageUrl = image.replace('_s', '_l');
     setModalImage(largeImageUrl);
+    setShowModal(true);
   };
 
-  const closeModal = () => {
-    setModalImage(null);
-  };
+  const closeModal = () => setShowModal(false);
 
   return (
     <div className="gallery">
@@ -42,18 +41,19 @@ const Gallery = () => {
       ))}
       <div className="pagination">
         {[...Array(Math.ceil(imageData.length / imagesPerPage)).keys()].map((pageNumber) => (
-          <button key={pageNumber} onClick={() => handlePageClick(pageNumber + 1)}>
+          <Button key={pageNumber} variant="primary" onClick={() => handlePageClick(pageNumber + 1)}>
             {pageNumber + 1}
-          </button>
+          </Button>
         ))}
       </div>
-      {modalImage && (
-        <div className="modal" onClick={closeModal}>
-          <div className="modal-content">
-            <img src={modalImage} alt="Modal Content" />
-          </div>
-        </div>
-      )}
+      <Modal show={showModal} onHide={closeModal} size="lg" centered>
+        <Modal.Body>
+          <img src={modalImage} alt="Modal Content" style={{width: '100%'}} />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={closeModal}>閉じる</Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };
