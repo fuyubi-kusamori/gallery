@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Gallery.css'; // スタイルを適用するためにインポートします
+import './styles.css'; // スタイルを適用するためにインポートします
 
 const Gallery = () => {
   // Function to generate imageData dynamically
