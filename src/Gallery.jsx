@@ -42,9 +42,9 @@ const Gallery = () => {
       ))}
       <div className="pagination">
         {[...Array(Math.ceil(imageData.length / imagesPerPage)).keys()].map((pageNumber) => (
-          <button key={pageNumber} onClick={() => handlePageClick(pageNumber + 1)}>
+          <a key={pageNumber} onClick={() => handlePageClick(pageNumber + 1)}>
             {pageNumber + 1}
-          </button>
+          </a>
         ))}
       </div>
       {modalImage && (
