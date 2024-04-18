@@ -19,7 +19,7 @@ a:hover, a:active { color: #996666; }
 #root {
 	margin: 50px auto;
 	padding: 25px;
-	width: 600px;
+	width: 800px;
 	background: #fff;
 	box-shadow:
     0 1.9px 2.5px rgba(0, 0, 0, 0.057),
