@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Gallery.css'; // スタイルを適用するためにインポートします
 
 const Gallery = () => {
   // Function to generate imageData dynamically
@@ -7,7 +8,7 @@ const Gallery = () => {
     for (let i = 1; i <= numImages; i++) {
       images.push({ id: i, url: `https://gallery-rouge-rho.vercel.app/img/${i}_s.jpg` });
     }
-    return images;
+    return images.reverse();
   };
 
   // Generate imageData for a desired number of images
@@ -17,8 +18,7 @@ const Gallery = () => {
   const imagesPerPage = 12;
   const indexOfLastImage = currentPage * imagesPerPage;
   const indexOfFirstImage = indexOfLastImage - imagesPerPage;
-  // Current images slice, then reverse for descending order
-  const currentImages = imageData.slice(indexOfFirstImage, indexOfLastImage).reverse();
+  const currentImages = imageData.slice(indexOfFirstImage, indexOfLastImage);
 
   const [modalImage, setModalImage] = useState(null);
 
@@ -49,7 +49,9 @@ const Gallery = () => {
       </div>
       {modalImage && (
         <div className="modal" onClick={closeModal}>
-          <img src={modalImage} alt="Modal Content" className="modal-content" />
+          <div className="modal-content">
+            <img src={modalImage} alt="Modal Content" />
+          </div>
         </div>
       )}
     </div>
