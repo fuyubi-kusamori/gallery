@@ -16,7 +16,7 @@ a:link { color: #990066; }
 a:visited { color: #996666; }
 a:hover, a:active { color: #996666; }
 
-#container {
+#root {
 	margin: 50px auto;
 	padding: 25px;
 	width: 600px;
