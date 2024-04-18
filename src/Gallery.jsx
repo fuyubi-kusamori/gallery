@@ -11,7 +11,7 @@ const Gallery = () => {
   };
 
   // Generate imageData for a desired number of images
-  const imageData = generateImageData(50); // Adjust the number as needed
+  const imageData = generateImageData(28); // Adjust the number as needed
 
   const [currentPage, setCurrentPage] = useState(1);
   const imagesPerPage = 12;
