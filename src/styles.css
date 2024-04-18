@@ -49,15 +49,7 @@ a:hover, a:active { color: #996666; }
 	margin: 20px auto 0;
 	padding: 0;
 	text-align: center;
-	font-size: 12px;
-	}
-
-#title span{
-	margin: 0;
-	padding: 0.5em;
 	font-size: 18px;
-	letter-spacing: 0.5em;
-	text-transform: uppercase;
 	}
 
 #subtitle{
@@ -65,7 +57,7 @@ a:hover, a:active { color: #996666; }
 	margin: 10px auto 20px;
 	padding: 0;
 	text-align: center;
-	font-size: 12px;
+	font-size: 14px;
 	letter-spacing: 0.2em;
 	}
 
