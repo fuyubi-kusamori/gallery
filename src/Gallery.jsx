@@ -17,7 +17,8 @@ const Gallery = () => {
   const imagesPerPage = 12;
   const indexOfLastImage = currentPage * imagesPerPage;
   const indexOfFirstImage = indexOfLastImage - imagesPerPage;
-  const currentImages = imageData.slice(indexOfFirstImage, indexOfLastImage);
+  // Current images slice, then reverse for descending order
+  const currentImages = imageData.slice(indexOfFirstImage, indexOfLastImage).reverse();
 
   const [modalImage, setModalImage] = useState(null);
 
