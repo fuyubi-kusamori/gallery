@@ -97,4 +97,5 @@ img {
 
 .pagination a {
 	margin: 7px;
+	cursor: pointer;
 }
