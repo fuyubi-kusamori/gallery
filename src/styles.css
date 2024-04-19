@@ -84,9 +84,9 @@ a:hover, a:active {
 }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; /* Adjusts the alignment of items on the line */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 img {
@@ -96,22 +96,21 @@ img {
 }
 
 .modal-content {
-    background: white;
-    padding: 10px;
-    border-radius: 10px;
+	background: white;
+	padding: 10px;
+	border-radius: 10px;
 }
 
 .pagination {
-    align-self: center; /* Center pagination horizontally */
-    width: 100%; /* Full width of the gallery */
-    padding: 10px 0; /* Padding above and below pagination */
-    display: flex;
-    justify-content: center; /* Center the pagination links */
+	align-self: center; /* Center pagination horizontally */
+	width: 100%; /* Full width of the gallery */
+	padding: 10px 0; /* Padding above and below pagination */
+	display: flex;
+	justify-content: center; /* Center the pagination links */
 }
 
 .pagination a {
-    cursor: pointer;
-    margin: 0 5px; /* Space between pagination links */
-    font-size: 15px;
-    display: inline-block; /* Align links in a row */
+	margin: 0 5px; /* Space between pagination links */
+	font-size: 15px;
+	display: inline-block; /* Align links in a row */
 }
