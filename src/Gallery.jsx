@@ -41,8 +41,8 @@ const Gallery = () => {
     <div className="gallery">
       {currentImages.map((image) => (
         <>
-          <p><img className="clip" src={`./etc/${getRandomNumber()}.jpg`} /><br /></p> {/* Simulated PHP-style code */}
-          <img key={image.id} src={image.url} alt={`Image ${image.id}`} onClick={() => openModal(image.url)} />
+          <p><img className="clip" src={`./etc/${getRandomNumber()}.jpg`} /><br /> {/* Simulated PHP-style code */}
+          <img key={image.id} src={image.url} alt={`Image ${image.id}`} onClick={() => openModal(image.url)}</p> />
         </>
       ))}
       <div className="pagination">
