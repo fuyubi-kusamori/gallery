@@ -1,3 +1,4 @@
+/* Base body styles */
 body {
 	margin: 0;
 	padding: 0;
@@ -10,38 +11,79 @@ body {
 	min-height: 100vh;
 	background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
 }
+
+/* Link styles */
 a { text-decoration: none; }
 a:link { color: #990066; }
 a:visited { color: #996666; }
 a:hover, a:active { color: #996666; }
+
+/* Container styles */
 #root {
 	margin: 50px auto;
 	padding: 25px;
 	width: 900px;
 	background: #fff;
-	box-shadow: 0 1.9px 2.5px rgba(0, 0, 0, 0.057), 0 5px 6.1px rgba(0, 0, 0, 0.076),
-		0 10.1px 11.4px rgba(0, 0, 0, 0.086), 0 19.2px 19.8px rgba(0, 0, 0, 0.092),
-		0 38.4px 34.8px rgba(0, 0, 0, 0.1), 0 101px 74px rgba(0, 0, 0, 0.13);
+	box-shadow: 0 1.9px 2.5px rgba(0, 0, 0, 0.057),
+	            0 5px 6.1px rgba(0, 0, 0, 0.076),
+	            0 10.1px 11.4px rgba(0, 0, 0, 0.086),
+	            0 19.2px 19.8px rgba(0, 0, 0, 0.092),
+	            0 38.4px 34.8px rgba(0, 0, 0, 0.1),
+	            0 101px 74px rgba(0, 0, 0, 0.13);
 }
+
+/* Text alignment */
+#center, #title, #subtitle {
+	text-align: center;
+}
+
 #center {
 	margin: 0 auto;
-	text-align: left;
 	overflow: hidden;
 	background: #ffffff;
 	padding: 25px;
 	box-sizing: border-box;
 }
+
 #header { margin: 0 0 10px; }
+
+/* Titles and subtitles */
 #title, #subtitle {
 	font-family: 'Josefin Slab', YuGothic, 'Yu Gothic', sans-serif;
-	margin: 20px auto 0;
+	margin: 20px auto;
 	padding: 0;
-	text-align: center;
 	font-size: 18px;
 	letter-spacing: 0.2em;
 }
+
 #subtitle { margin: 10px auto 20px; font-size: 14px; }
+
+/* Alignment for application and gallery sections */
 .app, .gallery { text-align: center; }
+
+/* Gallery display properties */
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/* Paragraph styling */
+p {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 5px;
+}
+
+/* Image styling */
+img {
+	margin: 5px;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Modal styles */
 .modal {
 	position: fixed;
 	top: 0;
@@ -53,36 +95,25 @@ a:hover, a:active { color: #996666; }
 	justify-content: center;
 	align-items: center;
 }
-.gallery {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around; /* Adjusts the alignment of items on the line */
-}
-p {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin: 5px; /* Adjusts the spacing between paragraphs/containers */
-}
-img {
-	margin: 5px; /* Slight reduction in margin for cleaner layout */
-	max-width: 100%; /* Ensures images are responsive and scale with their container */
-	height: auto; /* Maintains aspect ratio */
-}
+
+/* Modal content styling */
 .modal-content {
 	background: white;
 	padding: 10px;
 	border-radius: 10px;
 }
+
+/* Pagination styling */
 .pagination {
-	align-self: center; /* Center pagination horizontally */
-	width: 100%; /* Full width of the gallery */
-	padding: 10px 0; /* Padding above and below pagination */
+	align-self: center;
+	width: 100%;
+	padding: 10px 0;
 	display: flex;
-	justify-content: center; /* Center the pagination links */
+	justify-content: center;
 }
+
 .pagination a {
-	margin: 0 5px; /* Space between pagination links */
+	margin: 0 5px;
 	font-size: 15px;
-	display: inline-block; /* Align links in a row */
+	display: inline-block;
 }
