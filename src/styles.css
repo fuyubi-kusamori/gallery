@@ -122,7 +122,6 @@ img {
 .modal-content {
 	background: white;
 	padding: 10px;
-	border-radius: 10px;
 	height: 600px; /* Set the height of the modal content */
 	overflow: auto; /* Allows scrolling if content exceeds the modal size */
 	transition: transform 0.5s ease-out; /* Smooth transform transition */
