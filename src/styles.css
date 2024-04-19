@@ -85,7 +85,7 @@ a:hover, a:active {
 
 .gallery {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between; /* This will push the pagination to the bottom */
     min-height: 100vh; /* Ensures the gallery takes at least the full height of the viewport */
 }
