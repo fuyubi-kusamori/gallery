@@ -66,15 +66,8 @@ a:hover, a:active { color: #996666; }
 .gallery {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-}
-
-/* Paragraph styling */
-p {
-	display: flex;
 	flex-direction: row;
-	align-items: center;
-	margin: 5px;
+	justify-content: center;
 }
 
 /* Image styling */
