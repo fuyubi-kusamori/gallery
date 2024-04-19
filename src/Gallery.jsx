@@ -40,14 +40,14 @@ const Gallery = () => {
   return (
     <div className="gallery">
       {currentImages.map((image) => (
-        <>
-          <p></><img className="clip" src={`https://gallery-rouge-rho.vercel.app/etc/${getRandomNumber()}.jpg`} /><br />
-          <img key={image.id} src={image.url} alt={`Image ${image.id}`} onClick={() => openModal(image.url)} /></p></>
-        </>
+        <p key={image.id}>
+          <img className="clip" src={`https://gallery-rouge-rho.vercel.app/etc/${getRandomNumber()}.jpg`} alt="Random Image" /><br />
+          <img src={image.url} alt={`Image ${image.id}`} onClick={() => openModal(image.url)} />
+        </p>
       ))}
       <div className="pagination">
         {[...Array(Math.ceil(imageData.length / imagesPerPage)).keys()].map((pageNumber) => (
-          <a key={pageNumber} onClick={() => handlePageClick(pageNumber + 1)}>
+          <a key={pageNumber} onClick={() => handlePageClick(pageNumber + 1)} href="#">
             {pageNumber + 1}
           </a>
         ))}
