@@ -90,9 +90,9 @@ a:hover, a:active {
 }
 
 img {
-    width: 100%; /* Makes image responsive within its container */
-    height: auto;
-    display: block; /* Removes extra space below the image */
+	margin: 7px;
+	max-width: 100%;
+	height: auto;
 }
 
 .modal-content {
