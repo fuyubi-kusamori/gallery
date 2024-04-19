@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './styles.css'; // Apply styles by importing
 
 const Gallery = () => {
-  // Function to generate imageData dynamically
   const generateImageData = (numImages) => {
     const images = [];
     for (let i = 1; i <= numImages; i++) {
@@ -11,16 +10,12 @@ const Gallery = () => {
     return images.reverse();
   };
 
-  // Generate imageData for a desired number of images
   const imageData = generateImageData(27); // Adjust the number as needed
+  const imagesPerPage = 12;
+  const numOfPages = Math.ceil(imageData.length / imagesPerPage);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const imagesPerPage = 12;
-  const indexOfLastImage = currentPage * imagesPerPage;
-  const indexOfFirstImage = indexOfLastImage - imagesPerPage;
-  const currentImages = imageData.slice(indexOfFirstImage, indexOfLastImage);
-
-  const [modalImage, setModalImage] = useState(null);
+  const currentImages = imageData.slice((currentPage - 1) * imagesPerPage, currentPage * imagesPerPage);
 
   const handlePageClick = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -35,22 +30,31 @@ const Gallery = () => {
     setModalImage(null);
   };
 
-  const getRandomNumber = () => Math.floor(Math.random() * 6) + 1; // Generate a random number between 1 and 6
+  const [modalImage, setModalImage] = useState(null);
 
   return (
     <div className="gallery">
       {currentImages.map((image) => (
-        <>
-          <p><img className="clip" src={`./etc/${getRandomNumber()}.jpg`} /><br /> {/* Simulated PHP-style code */}
-          <img key={image.id} src={image.url} alt={`Image ${image.id}`} onClick={() => openModal(image.url)}</p> />
-        </>
+        <p key={image.id}>
+          <img className="clip" src={`https://gallery-rouge-rho.vercel.app/etc/${Math.floor(Math.random() * 6) + 1}.jpg`} alt="Random Image" /><br />
+          <img src={image.url} alt={`Image ${image.id}`} onClick={() => openModal(image.url)} />
+        </p>
       ))}
       <div className="pagination">
-        {[...Array(Math.ceil(imageData.length / imagesPerPage)).keys()].map((pageNumber) => (
-          <a key={pageNumber} onClick={() => handlePageClick(pageNumber + 1)}>
-            {pageNumber + 1}
+        {currentPage > 1 && (
+          <a onClick={() => handlePageClick(currentPage - 1)}>&laquo;</a>
+        )}
+        {[...Array(numOfPages).keys()].map(number => (
+          <a key={number + 1} 
+             onClick={() => handlePageClick(number + 1)}
+             className={currentPage === number + 1 ? 'active' : ''}
+          >
+            {number + 1}{currentPage === number + 1 ? '*' : ''}
           </a>
         ))}
+        {currentPage < numOfPages && (
+          <a onClick={() => handlePageClick(currentPage + 1)}>&raquo;</a>
+        )}
       </div>
       {modalImage && (
         <div className="modal" onClick={closeModal}>
