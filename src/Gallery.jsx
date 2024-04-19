@@ -24,9 +24,18 @@ const Gallery = () => {
   const openModal = (image) => {
     const largeImageUrl = image.replace('_s', '_l');
     setModalImage(largeImageUrl);
+    // Add a delay to apply the scale class after the modal is rendered
+    setTimeout(() => {
+        const modalContent = document.querySelector('.modal-content');
+        modalContent.classList.add('open');
+    }, 10); // Short delay to ensure the class is added after rendering
   };
 
   const closeModal = () => {
+    const modalContent = document.querySelector('.modal-content');
+    if (modalContent) {
+        modalContent.classList.remove('open'); // Remove the class when modal is closed
+    }
     setModalImage(null);
   };
 
