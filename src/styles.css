@@ -79,22 +79,37 @@ img {
 
 /* Modal styles */
 .modal {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(0, 0, 0, 0.6);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s; /* Fade in animation for the modal */
+}
+
+/* Keyframes for fade in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Modal content styling */
 .modal-content {
-	background: white;
-	padding: 10px;
-	border-radius: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    height: 600px; /* Set the height of the modal content */
+    overflow: auto; /* Allows scrolling if content exceeds the modal size */
+    transition: transform 0.5s ease-out; /* Smooth transform transition */
+}
+
+/* Style to scale up the modal content when it's opened */
+.modal-content.open {
+    transform: scale(1.05); /* Slightly increase the size when opened */
 }
 
 /* Pagination styling */
