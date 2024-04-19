@@ -86,45 +86,49 @@ a:hover, a:active {
 .gallery {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensures that the pagination bar is pushed to the bottom */
-    height: 100%; /* Set a specific height if needed */
+    justify-content: flex-start; /* Align content to the top, letting pagination stay at the bottom */
+    height: 100%; /* Maintains full height to utilize space effectively */
+}
+
+.gallery-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Ensures images are evenly spaced and wrap as needed */
+    flex-grow: 1; /* Allows this div to expand, taking all available space except what pagination needs */
+    margin-bottom: auto; /* Pushes pagination down */
 }
 
 p {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 5px; /* Adjusts the spacing between paragraphs/containers */
+    flex: 0 1 auto; /* Flex item does not grow but can shrink; basis is auto */
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 3 - 10px); /* Adjust number as needed for more or fewer columns */
 }
 
 img {
-  margin: 5px; /* Slight reduction in margin for cleaner layout */
-  max-width: 100%; /* Ensures images are responsive and scale with their container */
-  height: auto; /* Maintains aspect ratio */
+    margin: 5px;
+    max-width: 100%;
+    height: auto;
 }
 
 .modal-content {
-  background: white;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; /* Adjusts the alignment of items on the line */
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .pagination {
-    align-self: center; /* Centers pagination horizontally within the gallery */
-    padding: 10px 0; /* Adds padding at the top and bottom for visual separation */
-    width: 100%; /* Ensures the pagination bar spans the width of the gallery */
+    align-self: center;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center; /* Ensures pagination links are centered */
 }
 
 .pagination a {
     cursor: pointer;
     margin: 7px;
     font-size: 15px;
-    display: inline-block; /* Ensures links are lined up in a row */
+    display: inline-block;
 }
-
