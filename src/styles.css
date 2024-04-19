@@ -86,31 +86,30 @@ a:hover, a:active {
 .gallery {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content to the top, letting pagination stay at the bottom */
-    height: 100%; /* Maintains full height to utilize space effectively */
+    justify-content: space-between; /* This will push the pagination to the bottom */
+    min-height: 100vh; /* Ensures the gallery takes at least the full height of the viewport */
 }
 
 .gallery-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around; /* Ensures images are evenly spaced and wrap as needed */
-    flex-grow: 1; /* Allows this div to expand, taking all available space except what pagination needs */
-    margin-bottom: auto; /* Pushes pagination down */
 }
 
 p {
-    flex: 0 1 auto; /* Flex item does not grow but can shrink; basis is auto */
-    margin: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(100% / 3 - 10px); /* Adjust number as needed for more or fewer columns */
+    margin: 5px; /* Adjusts the spacing between paragraphs/containers */
+    width: calc(33.333% - 10px); /* 3 images per row with appropriate spacing */
+    box-sizing: border-box; /* Includes padding and border in the element's width */
 }
 
 img {
-    margin: 5px;
-    max-width: 100%;
+    width: 100%; /* Makes image responsive within its container */
     height: auto;
+    max-width: 100%; /* Prevents the image from exceeding its container */
+    display: block; /* Removes extra space below the image */
 }
 
 .modal-content {
@@ -120,15 +119,16 @@ img {
 }
 
 .pagination {
-    align-self: center;
-    padding: 10px 0;
-    width: 100%;
-    text-align: center; /* Ensures pagination links are centered */
+    align-self: center; /* Center pagination horizontally */
+    width: 100%; /* Full width of the gallery */
+    padding: 10px 0; /* Padding above and below pagination */
+    display: flex;
+    justify-content: center; /* Center the pagination links */
 }
 
 .pagination a {
     cursor: pointer;
-    margin: 7px;
+    margin: 0 5px; /* Space between pagination links */
     font-size: 15px;
-    display: inline-block;
+    display: inline-block; /* Align links in a row */
 }
