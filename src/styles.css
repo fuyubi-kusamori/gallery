@@ -86,29 +86,31 @@ a:hover, a:active {
 .gallery {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* This will push the pagination to the bottom */
+    justify-content: flex-start; /* Align content to the top */
     min-height: 100vh; /* Ensures the gallery takes at least the full height of the viewport */
 }
 
+/* Ensure .gallery-content is declared and used in your JSX if not already */
 .gallery-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around; /* Ensures images are evenly spaced and wrap as needed */
+    margin: auto;
+    width: 100%; /* Adjusts the width to ensure responsiveness */
 }
 
 p {
+    flex: 1 1 200px; /* Allows flex items to grow and shrink from a base of 200px */
+    margin: 5px; /* Adjusts the spacing between image containers */
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5px; /* Adjusts the spacing between paragraphs/containers */
-    width: calc(33.333% - 10px); /* 3 images per row with appropriate spacing */
     box-sizing: border-box; /* Includes padding and border in the element's width */
 }
 
 img {
     width: 100%; /* Makes image responsive within its container */
     height: auto;
-    max-width: 100%; /* Prevents the image from exceeding its container */
     display: block; /* Removes extra space below the image */
 }
 
