@@ -41,7 +41,7 @@ const Gallery = () => {
     <div className="gallery">
       {currentImages.map((image) => (
         <>
-          <p><img className="clip" src={`https://gallery-rouge-rho.vercel.app/etc/${getRandomNumber()}.jpg`} /><br /></p>
+          <img className="clip" src={`https://gallery-rouge-rho.vercel.app/etc/${getRandomNumber()}.jpg`} /><br />
           <img key={image.id} src={image.url} alt={`Image ${image.id}`} onClick={() => openModal(image.url)} />
         </>
       ))}
