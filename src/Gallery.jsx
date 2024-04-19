@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './styles.css'; // スタイルを適用するためにインポートします
+import './styles.css'; // Apply styles by importing
 
 const Gallery = () => {
   // Function to generate imageData dynamically
@@ -35,10 +35,15 @@ const Gallery = () => {
     setModalImage(null);
   };
 
+  const getRandomNumber = () => Math.floor(Math.random() * 6) + 1; // Generate a random number between 1 and 6
+
   return (
     <div className="gallery">
       {currentImages.map((image) => (
-        <img key={image.id} src={image.url} alt={`Image ${image.id}`} onClick={() => openModal(image.url)} />
+        <>
+          <p><img className="clip" src={`https://gallery-rouge-rho.vercel.app/etc/${getRandomNumber()}.jpg`} /><br /></p>
+          <img key={image.id} src={image.url} alt={`Image ${image.id}`} onClick={() => openModal(image.url)} />
+        </>
       ))}
       <div className="pagination">
         {[...Array(Math.ceil(imageData.length / imagesPerPage)).keys()].map((pageNumber) => (
