@@ -50,7 +50,7 @@ a:hover, a:active { color: #996666; }
 /* Titles and subtitles */
 #title, #subtitle {
 	font-family: 'Josefin Slab', YuGothic, 'Yu Gothic', sans-serif;
-	margin: 20px auto;
+	margin: 15px auto;
 	padding: 0;
 	font-size: 18px;
 	letter-spacing: 0.2em;
@@ -138,7 +138,7 @@ img {
 
 /* Styling for images within the modal to fit the modal size */
 .modal-content img {
-	max-height: 97%; /* Slightly less than modal to account for padding */
+	max-height: 98%; /* Slightly less than modal to account for padding */
 	width: auto; /* Maintain aspect ratio */
 	object-fit: contain; /* Ensures the image is scaled properly within the constraints */
 }
