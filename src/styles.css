@@ -84,9 +84,10 @@ a:hover, a:active {
 }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; /* Adjusts the alignment of items on the line */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures that the pagination bar is pushed to the bottom */
+    height: 100%; /* Set a specific height if needed */
 }
 
 p {
@@ -108,8 +109,23 @@ img {
   border-radius: 10px;
 }
 
-.pagination a {
-	cursor: pointer;
-	margin: 7px;
-	font-size: 15px;
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures that the pagination bar is pushed to the bottom */
+    height: 100%; /* Set a specific height if needed */
 }
+
+.pagination {
+    align-self: center; /* Centers pagination horizontally within the gallery */
+    padding: 10px 0; /* Adds padding at the top and bottom for visual separation */
+    width: 100%; /* Ensures the pagination bar spans the width of the gallery */
+}
+
+.pagination a {
+    cursor: pointer;
+    margin: 7px;
+    font-size: 15px;
+    display: inline-block; /* Ensures links are lined up in a row */
+}
+
