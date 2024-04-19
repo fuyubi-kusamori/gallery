@@ -110,10 +110,9 @@ img {
 }
 
 .gallery {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ensures that the pagination bar is pushed to the bottom */
-    height: 100%; /* Set a specific height if needed */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjusts the alignment of items on the line */
 }
 
 .pagination {
