@@ -98,19 +98,51 @@ img {
 }
 
 /* Modal content styling */
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s; /* Fade in animation for the modal */
+}
+
+/* Keyframes for fade in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Modal content styling */
 .modal-content {
-    background: white;
-    padding: 10px;
-    border-radius: 10px;
-    height: 600px; /* Set the height of the modal content */
-    overflow: auto; /* Allows scrolling if content exceeds the modal size */
-    transition: transform 0.5s ease-out; /* Smooth transform transition */
+	background: white;
+	padding: 10px;
+	border-radius: 10px;
+	height: 600px; /* Set the height of the modal content */
+	overflow: auto; /* Allows scrolling if content exceeds the modal size */
+	transition: transform 0.5s ease-out; /* Smooth transform transition */
+	display: flex; /* Ensures content is flexibly laid out */
+	align-items: center; /* Vertically center content in the modal */
+	justify-content: center; /* Horizontally center content */
 }
 
 /* Style to scale up the modal content when it's opened */
 .modal-content.open {
-    transform: scale(1.05); /* Slightly increase the size when opened */
+	transform: scale(1.05); /* Slightly increase the size when opened */
 }
+
+/* Styling for images within the modal to fit the modal size */
+.modal-content img {
+	max-height: 90%; /* Slightly less than modal to account for padding */
+	width: auto; /* Maintain aspect ratio */
+	object-fit: contain; /* Ensures the image is scaled properly within the constraints */
+}
+
 
 /* Pagination styling */
 .pagination {
