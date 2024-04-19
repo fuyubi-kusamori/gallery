@@ -10,36 +10,19 @@ body {
 	min-height: 100vh;
 	background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
 }
-
-a {
-	text-decoration: none;
-}
-
-a:link {
-	color: #990066;
-}
-
-a:visited {
-	color: #996666;
-}
-
-a:hover, a:active {
-	color: #996666;
-}
-
+a { text-decoration: none; }
+a:link { color: #990066; }
+a:visited { color: #996666; }
+a:hover, a:active { color: #996666; }
 #root {
 	margin: 50px auto;
 	padding: 25px;
 	width: 900px;
 	background: #fff;
-	box-shadow: 0 1.9px 2.5px rgba(0, 0, 0, 0.057),
-				0 5px 6.1px rgba(0, 0, 0, 0.076),
-				0 10.1px 11.4px rgba(0, 0, 0, 0.086),
-				0 19.2px 19.8px rgba(0, 0, 0, 0.092),
-				0 38.4px 34.8px rgba(0, 0, 0, 0.1),
-				0 101px 74px rgba(0, 0, 0, 0.13);
+	box-shadow: 0 1.9px 2.5px rgba(0, 0, 0, 0.057), 0 5px 6.1px rgba(0, 0, 0, 0.076),
+		0 10.1px 11.4px rgba(0, 0, 0, 0.086), 0 19.2px 19.8px rgba(0, 0, 0, 0.092),
+		0 38.4px 34.8px rgba(0, 0, 0, 0.1), 0 101px 74px rgba(0, 0, 0, 0.13);
 }
-
 #center {
 	margin: 0 auto;
 	text-align: left;
@@ -48,11 +31,7 @@ a:hover, a:active {
 	padding: 25px;
 	box-sizing: border-box;
 }
-
-#header {
-	margin: 0 0 10px;
-}
-
+#header { margin: 0 0 10px; }
 #title, #subtitle {
 	font-family: 'Josefin Slab', YuGothic, 'Yu Gothic', sans-serif;
 	margin: 20px auto 0;
@@ -61,16 +40,8 @@ a:hover, a:active {
 	font-size: 18px;
 	letter-spacing: 0.2em;
 }
-
-#subtitle {
-	margin: 10px auto 20px;
-	font-size: 14px;
-}
-
-.app, .gallery {
-	text-align: center;
-}
-
+#subtitle { margin: 10px auto 20px; font-size: 14px; }
+.app, .gallery { text-align: center; }
 .modal {
 	position: fixed;
 	top: 0;
@@ -82,32 +53,27 @@ a:hover, a:active {
 	justify-content: center;
 	align-items: center;
 }
-
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; /* Adjusts the alignment of items on the line */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around; /* Adjusts the alignment of items on the line */
 }
-
 p {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 5px; /* Adjusts the spacing between paragraphs/containers */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 5px; /* Adjusts the spacing between paragraphs/containers */
 }
-
 img {
-  margin: 5px; /* Slight reduction in margin for cleaner layout */
-  max-width: 100%; /* Ensures images are responsive and scale with their container */
-  height: auto; /* Maintains aspect ratio */
+	margin: 5px; /* Slight reduction in margin for cleaner layout */
+	max-width: 100%; /* Ensures images are responsive and scale with their container */
+	height: auto; /* Maintains aspect ratio */
 }
-
 .modal-content {
-  background: white;
-  padding: 10px;
-  border-radius: 10px;
+	background: white;
+	padding: 10px;
+	border-radius: 10px;
 }
-
 .pagination {
 	align-self: center; /* Center pagination horizontally */
 	width: 100%; /* Full width of the gallery */
@@ -115,7 +81,6 @@ img {
 	display: flex;
 	justify-content: center; /* Center the pagination links */
 }
-
 .pagination a {
 	margin: 0 5px; /* Space between pagination links */
 	font-size: 15px;
