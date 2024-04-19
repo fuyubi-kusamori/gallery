@@ -41,8 +41,8 @@ const Gallery = () => {
     <div className="gallery">
       {currentImages.map((image) => (
         <>
-          <img className="clip" src={`https://gallery-rouge-rho.vercel.app/etc/${getRandomNumber()}.jpg`} /><br />
-          <img key={image.id} src={image.url} alt={`Image ${image.id}`} onClick={() => openModal(image.url)} />
+          <p></><img className="clip" src={`https://gallery-rouge-rho.vercel.app/etc/${getRandomNumber()}.jpg`} /><br />
+          <img key={image.id} src={image.url} alt={`Image ${image.id}`} onClick={() => openModal(image.url)} /></p></>
         </>
       ))}
       <div className="pagination">
