@@ -174,11 +174,8 @@ img {
     }
 
     .modal-content {
-        width: 90%;
-    }
-
-    .pagination a {
-        font-size: 12px;
+	padding: 10px !important;
+        width: 80%;
     }
 }
 
