@@ -174,8 +174,8 @@ img {
     }
 
     .modal-content {
-	height: auto;
-        width: 600px;
+        width: 500px;
+        height: auto;
     }
 }
 
