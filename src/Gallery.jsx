@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
 import './styles.css'; // Apply styles by importing
 
 const Gallery = () => {
@@ -17,58 +16,63 @@ const Gallery = () => {
 
   const [currentPage, setCurrentPage] = useState(1);
   const currentImages = imageData.slice((currentPage - 1) * imagesPerPage, currentPage * imagesPerPage);
-  const [modalImage, setModalImage] = useState(null);
-  const [showModal, setShowModal] = useState(false);
 
   const handlePageClick = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
 
   const openModal = (image) => {
-    setModalImage(image.replace('_s', '_l'));
-    setShowModal(true);
+    const largeImageUrl = image.replace('_s', '_l');
+    setModalImage(largeImageUrl);
+    // Add a delay to apply the scale class after the modal is rendered
+    setTimeout(() => {
+        const modalContent = document.querySelector('.modal-content');
+        modalContent.classList.add('open');
+    }, 10); // Short delay to ensure the class is added after rendering
   };
 
   const closeModal = () => {
-    setShowModal(false);
+    const modalContent = document.querySelector('.modal-content');
+    if (modalContent) {
+        modalContent.classList.remove('open'); // Remove the class when modal is closed
+    }
+    setModalImage(null);
   };
 
+  const [modalImage, setModalImage] = useState(null);
+
   return (
-    <Container className="gallery">
-      <Row>
-        {currentImages.map((image) => (
-          <Col xs={6} md={4} lg={3} key={image.id} className="mb-3">
-            <img src={image.url} alt={`Image ${image.id}`} className="img-fluid" onClick={() => openModal(image.url)} />
-          </Col>
+    <div className="gallery">
+      {currentImages.map((image) => (
+        <p key={image.id}>
+          <img className="clip" src={`https://gallery-rouge-rho.vercel.app/clip/${Math.floor(Math.random() * 6) + 1}.jpg`} alt="Random Image" /><br />
+          <img src={image.url} alt={`Image ${image.id}`} onClick={() => openModal(image.url)} />
+        </p>
+      ))}
+      <div className="pagination">
+        {currentPage > 1 && (
+          <a onClick={() => handlePageClick(currentPage - 1)}>&laquo;</a>
+        )}
+        {[...Array(numOfPages).keys()].map(number => (
+          <a key={number + 1} 
+             onClick={() => handlePageClick(number + 1)}
+             className={currentPage === number + 1 ? 'active' : ''}
+          >
+            {number + 1}{currentPage === number + 1 ? '*' : ''}
+          </a>
         ))}
-      </Row>
-      <Row>
-        <div className="pagination">
-          {currentPage > 1 && (
-            <Button variant="link" onClick={() => handlePageClick(currentPage - 1)}>&laquo;</Button>
-          )}
-          {[...Array(numOfPages).keys()].map(number => (
-            <Button key={number + 1} variant="link"
-               onClick={() => handlePageClick(number + 1)}
-               className={currentPage === number + 1 ? 'active' : ''}
-            >
-              {number + 1}
-            </Button>
-          ))}
-          {currentPage < numOfPages && (
-            <Button variant="link" onClick={() => handlePageClick(currentPage + 1)}>&raquo;</Button>
-          )}
+        {currentPage < numOfPages && (
+          <a onClick={() => handlePageClick(currentPage + 1)}>&raquo;</a>
+        )}
+      </div>
+      {modalImage && (
+        <div className="modal" onClick={closeModal}>
+          <div className="modal-content">
+            <img src={modalImage} alt="Modal Content" />
+          </div>
         </div>
-      </Row>
-      <Modal show={showModal} onHide={closeModal} centered>
-        <Modal.Body>
-          <img src={modalImage} alt="Modal Content" className="img-fluid" />
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={closeModal}>Close</Button>
-        </Modal.Footer>
-      </Modal>
-    </Container>
+      )}
+    </div>
   );
 };
 
