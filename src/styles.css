@@ -166,12 +166,9 @@ img {
     }
 
     .clip {
-        width: 119px !important;
+        width: 119px;
     }
-    .gallery {
-        flex-direction: column;
-    }
-	
+
     .gallery img {
         width: 100%;
     }
