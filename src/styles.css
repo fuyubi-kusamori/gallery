@@ -166,11 +166,11 @@ img {
     }
 
     .clip {
-        width: 119px;
+        max-width: 119px !important;
     }
 
     .gallery img {
-        width: 100%;
+        max-width: 100%;
     }
 
     .modal-content {
