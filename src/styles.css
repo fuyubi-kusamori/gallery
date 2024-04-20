@@ -174,8 +174,8 @@ img {
     }
 
     .modal-content {
-	padding: 10px !important;
-        width: 80%;
+	height: auto;
+        width: 600px;
     }
 }
 
