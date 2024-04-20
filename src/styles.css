@@ -166,7 +166,7 @@ img {
     }
 
     .clip {
-        width: 119px;
+        width: 119px !important;
     }
 
     .gallery img {
