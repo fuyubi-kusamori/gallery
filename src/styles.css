@@ -169,7 +169,7 @@ img {
         width: 119px !important;
     }
     .gallery img {
-        flex-direction: colmn;
+        flex-direction: column;
     }
 	
     .gallery img {
