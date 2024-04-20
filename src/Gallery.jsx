@@ -68,7 +68,7 @@ const Gallery = () => {
           <Button variant="secondary" onClick={closeModal}>Close</Button>
         </Modal.Footer>
       </Modal>
-    </div>
+    </Container>
   );
 };
 
