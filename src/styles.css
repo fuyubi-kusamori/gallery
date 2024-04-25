@@ -14,8 +14,8 @@ body {
 
 /* Link styles */
 a { text-decoration: none; }
-a:link { color: #407db5; }
-a:visited { color: #407db5; }
+a:link { color: #59bdda; }
+a:visited { color: #59bdda; }
 a:hover, a:active { color: #d3eaea; }
 
 /* Container styles */
