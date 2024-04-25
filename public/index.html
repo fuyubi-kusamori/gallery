@@ -6,6 +6,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&family=Sacramento&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Gallery</title>
+    <script>
+        function randomPosition(max) {
+        return Math.floor(Math.random() * max);
+        }
+
+        function createStar() {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.top = randomPosition(window.innerHeight) + 'px';
+        star.style.left = randomPosition(window.innerWidth) + 'px';
+        star.style.animationDuration = `${2 + Math.random() * 3}s`; // 2 to 5 seconds
+        document.body.appendChild(star);
+        }
+
+        // 例えば100個の星を生成
+        for (let i = 0; i < 100; i++) {
+        createStar();
+        }
+    <script>
 </head>
 <body>
     <div id="root"></div>
