@@ -12,20 +12,6 @@ body {
 	background-image: linear-gradient(to top, #59bdda 0%, #d3eaea 100%);
 }
 
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-.star {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background-color: white;
-  border-radius: 50%;
-  animation: blink 3s infinite;
-}
-
 /* Link styles */
 a { color: #407db5; text-decoration: none; }
 a:link { color: #407db5; }
