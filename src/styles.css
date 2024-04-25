@@ -4,7 +4,7 @@ body {
 	padding: 0;
 	text-align: center;
 	font-family: 'Josefin Slab', YuGothic, 'Yu Gothic', sans-serif;
-	color: #59bdda;
+	color: #000;
 	font-size: 13px;
 	letter-spacing: 0.2em;
 	line-height: 1.5;
@@ -13,7 +13,7 @@ body {
 }
 
 /* Link styles */
-a { text-decoration: none; }
+a { color: #59bdda; text-decoration: none; }
 a:link { color: #59bdda; }
 a:visited { color: #59bdda; }
 a:hover, a:active { color: #d3eaea; }
