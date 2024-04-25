@@ -9,23 +9,5 @@
 </head>
 <body>
     <div id="root"></div>
-    <script>
-        function randomPosition(max) {
-        return Math.floor(Math.random() * max);
-        }
-
-        function createStar() {
-        const star = document.createElement('div');
-        star.className = 'star';
-        star.style.top = randomPosition(window.innerHeight) + 'px';
-        star.style.left = randomPosition(window.innerWidth) + 'px';
-        star.style.animationDuration = `${2 + Math.random() * 3}s`; // 2 to 5 seconds
-        document.body.appendChild(star);
-        }
-
-        for (let i = 0; i < 100; i++) {
-        createStar();
-        }
-    </script>
 </body>
 </html>
