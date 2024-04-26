@@ -50,14 +50,14 @@ a:hover, a:active { color: #d3eaea; }
 /* Titles and subtitles */
 #title, #subtitle {
 	font-family: 'Josefin Slab', YuGothic, 'Yu Gothic', sans-serif;
-	margin: 15px auto;
+	margin: 10px auto 0;
 	padding: 0;
 	font-size: 20px;
 	letter-spacing: 0.2em;
 	text-align: center;
 }
 
-#subtitle { margin: 10px auto 20px; font-size: 15px; }
+#subtitle { margin: 0 auto 20px; font-size: 15px; }
 
 /* Alignment for application and gallery sections */
 .app, .gallery { text-align: center; }
