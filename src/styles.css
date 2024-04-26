@@ -57,7 +57,7 @@ a:hover, a:active { color: #d3eaea; }
 	text-align: center;
 }
 
-#subtitle { margin: 0 auto 20px; font-size: 15px; }
+#subtitle { margin: 10px auto 20px; font-size: 15px; }
 
 /* Alignment for application and gallery sections */
 .app, .gallery { text-align: center; }
